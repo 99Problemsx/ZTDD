@@ -1,0 +1,30 @@
+# 🔄 Reusable Workflows Configuration
+# Diese Workflows werden von anderen Workflows wiederverwendet
+
+name: Ruby Setup
+on:
+  workflow_call:
+    inputs:
+      ruby-version:
+        description: "Ruby version to use"
+        required: false
+        default: "3.0"
+        type: string
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ inputs.ruby-version }}
+          bundler-cache: true
+
+      - name: Cache Ruby gems
+        uses: actions/cache@v4
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-

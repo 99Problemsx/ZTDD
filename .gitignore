@@ -1,52 +1,124 @@
-# Encryption-related files - DO NOT COMMIT!
+# ==================================
+# Encryption & Security - DO NOT COMMIT!
+# ==================================
 *.backup
 *.backup_*
 *.old_encryption
-ENCRYPTION_KEY.txt
-ENCRYPTION_KEY.bin
-ENCRYPTION_KEY_HEX.txt
+ENCRYPTION_KEY*.txt
+ENCRYPTION_KEY*.bin
 encryption_key.txt
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
 
-# Release folders
+# ==================================
+# Build & Release Artifacts
+# ==================================
 Zorua_Release/
 Zorua_Release_Encrypted/
+release/
+dist/
+build/
+*.zip
+*.7z
+*.rar
 
-# Encryption tools (optional - you may want to keep these in repo)
-# decrypt_tool.rb
-# encrypt_everything.rb
-# encrypt_scripts_now.rb
-# count_scripts.rb
-
-# Development files
+# ==================================
+# Development Files
+# ==================================
 errorlog.txt
+advanced_ai_log.txt
+luts_log.txt
 *.log
-
-# Visual Studio files
-.vs/
-*.vsidx
-*.vsuo
-*.wsuo
-
-# OS files
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# Temporary files
 *.tmp
 *.temp
 temp-test-stuff/
+node_modules/
 
-# Python cache files
+# ==================================
+# IDE & Editor Files
+# ==================================
+.vs/
+.vscode/
+*.vsidx
+*.vsuo
+*.wsuo
+*.suo
+.idea/
+*.iml
+
+# ==================================
+# OS Files
+# ==================================
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+Icon?
+._*
+
+# ==================================
+# Python Cache Files
+# ==================================
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .Python
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
 
-# Save files (optional - if you don't want to commit saves)
+# ==================================
+# Ruby/Rails Files
+# ==================================
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+.bundle/
+vendor/bundle
+
+# ==================================
+# Save Files (Game Data)
+# ==================================
 *.rxdata
 !Data/*.rxdata
 Game.rxdata
 Auto*.rxdata
 File*.rxdata
+Save Files/*.rxdata
+
+# ==================================
+# Documentation Build
+# ==================================
+_site/
+.jekyll-cache/
+.jekyll-metadata
+docs/_build/
+
+# ==================================
+# Package Manager Files
+# ==================================
+package-lock.json
+yarn.lock
+Gemfile.lock
+
+# ==================================
+# Mirrorbytes/Custom Tools (Optional)
+# ==================================
+mirrorbytes/temp/
+mirrorbytes/cache/
+

@@ -1,24 +1,52 @@
+<div align="center">
+
 # 🎮 Pokémon Zorua - The Divine Deception
 
-![Pokémon Essentials](https://img.shields.io/badge/Pokémon_Essentials-v21.1-green?style=for-the-badge) ![Ruby](https://img.shields.io/badge/Ruby-3.0+-red?style=for-the-badge) ![Status](https://img.shields.io/badge/Status-In_Development-yellow?style=for-the-badge)
+### *Ein ambitioniertes Fan-Game Projekt*
 
-🌐 Aktueller Branch: Main - Spielentwicklung
+[![Pokémon Essentials](https://img.shields.io/badge/Pokémon_Essentials-v21.1-green?style=for-the-badge&logo=ruby)](https://github.com/Maruno17/pokemon-essentials)
+[![Ruby](https://img.shields.io/badge/Ruby-3.0+-red?style=for-the-badge&logo=ruby)](https://www.ruby-lang.org/)
+[![Status](https://img.shields.io/badge/Status-In_Development-yellow?style=for-the-badge)](https://github.com/99Problemsx/ZTDD/actions)
+[![License](https://img.shields.io/badge/License-Fan_Project-blue?style=for-the-badge)](LICENSE)
 
-[📖 Wiki](https://github.com/99Problemsx/Zorua-the-divine-deception/wiki) • [💬 Diskussionen](https://github.com/99Problemsx/Zorua-the-divine-deception/discussions) • [🐛 Issues](https://github.com/99Problemsx/Zorua-the-divine-deception/issues)
+[![CI/CD Pipeline](https://github.com/99Problemsx/ZTDD/actions/workflows/ci-pipeline.yml/badge.svg)](https://github.com/99Problemsx/ZTDD/actions/workflows/ci-pipeline.yml)
+[![Security Scan](https://github.com/99Problemsx/ZTDD/actions/workflows/security-scan.yml/badge.svg)](https://github.com/99Problemsx/ZTDD/actions/workflows/security-scan.yml)
+[![Code Quality](https://github.com/99Problemsx/ZTDD/actions/workflows/code-quality.yml/badge.svg)](https://github.com/99Problemsx/ZTDD/actions/workflows/code-quality.yml)
 
-## 📂 Über Zorua - The Divine Deception
+[📖 Dokumentation](https://99problemsx.github.io/ZTDD/) • [🎮 Releases](https://github.com/99Problemsx/ZTDD/releases) • [💬 Diskussionen](https://github.com/99Problemsx/ZTDD/discussions) • [🐛 Issues](https://github.com/99Problemsx/ZTDD/issues)
 
-Pokémon Zorua - The Divine Deception ist ein ambitioniertes Fan-Game basierend auf Pokémon Essentials v21.1 - ein umfangreiches Framework für RPG Maker XP, das es ermöglicht, eigene Pokémon-Spiele zu erstellen.
+---
 
-### ✨ Features
+</div>
 
-• 🎮 **Alle offiziellen Pokémon** - Gen 1-9 Pokemon aus allen offiziellen Generationen
-• 🔌 **Advanced Plugin-System** - PBS Data System, Wind Animation, und viele mehr
-• 🇩🇪 **Deutsche Lokalisierung** - Vollständig auf Deutsch übersetzt
-• ⚡ **MKXP-Z Engine** - Moderne Engine mit besserer Performance
-• 🎨 **Custom Graphics** - Einzigartige Animationen und Effekte
-• 🔄 **Ruby-basiertes PBS System** - Keine Textdateien, alles in Ruby-Klassen
-• 💾 **Auto-Data-Generation** - Fehlende .dat Dateien werden automatisch erstellt
+## 🌟 Highlights
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎯 Game Features
+- 🎮 **Gen 1-9 Pokémon** - Alle offiziellen Generationen
+- ⚡ **Dynamax & Gigantamax** - Vollständig implementiert
+- 🔮 **Terastallization** - Gen 9 Mechanik
+- 💎 **Z-Moves** - Gen 7 System
+- 🏟️ **Raid Battles** - Multiplayer-ready
+- 🇩🇪 **Deutsche Lokalisierung** - Vollständig übersetzt
+
+</td>
+<td width="50%">
+
+### 🔧 Technical Features
+- 🔌 **Ruby-basiertes PBS** - Moderne Datenstruktur
+- ⚡ **MKXP-Z Engine** - Optimierte Performance
+- 🎨 **Custom Graphics** - Einzigartige Animationen
+- 💾 **Auto-Data-Generation** - Automatische Kompilierung
+- 🔄 **Modular Plugins** - 50+ Plugin-Systeme
+- 🚀 **CI/CD Pipeline** - Automatisierte Tests & Builds
+
+</td>
+</tr>
+</table>
 
 ## 🛠️ Plugin-Übersicht
 
@@ -41,24 +69,62 @@ Pokémon Zorua - The Divine Deception ist ein ambitioniertes Fan-Game basierend 
 - **Following Pokemon EX** - Pokemon folgen dem Spieler
 - **Advanced Pokemon Storage** - Verbessertes PC-System
 
-## 📥 Installation
+## 📥 Quick Start
 
-### Für Spieler
+### 🎮 Für Spieler
 
-1. Gehe zu [Releases](https://github.com/99Problemsx/Zorua-the-divine-deception/releases/latest)
-2. Lade das neueste Release herunter
-3. Entpacke das Archiv
-4. Starte `Game.exe`
+```bash
+# 1. Neuestes Release herunterladen
+# Gehe zu: https://github.com/99Problemsx/ZTDD/releases/latest
 
-### Für Entwickler
+# 2. Entpacke das Archiv
+# 3. Starte Game.exe
+```
+
+### 👨‍💻 Für Entwickler
 
 ```bash
 # Repository klonen
-git clone https://github.com/99Problemsx/Zorua-the-divine-deception.git
-cd Zorua-the-divine-deception
+git clone https://github.com/99Problemsx/ZTDD.git
+cd ZTDD
 
-# Direkt mit RPG Maker XP oder MKXP-Z öffnen
+# Ruby installieren (3.0+)
+# https://www.ruby-lang.org/de/downloads/
+
+# MKXP-Z Runtime installieren (empfohlen)
+# https://github.com/mkxp-z/mkxp-z/releases
+
+# Spiel starten
+./Game.exe
 ```
+
+<details>
+<summary>🔧 Erweiterte Setup-Optionen</summary>
+
+### Entwicklungsumgebung einrichten
+
+```bash
+# Ruby Gems installieren
+gem install rubocop rubocop-performance
+gem install flog flay reek
+
+# Git Hooks einrichten (optional)
+git config core.hooksPath .github/hooks
+
+# Pre-commit Hook für Syntax-Check
+echo '#!/bin/bash
+find Plugins -name "*.rb" -print0 | xargs -0 -n1 ruby -c
+' > .github/hooks/pre-commit
+chmod +x .github/hooks/pre-commit
+```
+
+### IDE Empfehlungen
+
+- **Visual Studio Code** mit Ruby Extension
+- **RubyMine** (JetBrains IDE)
+- **Sublime Text** mit Ruby Plugin
+
+</details>
 
 ## 🔧 Entwicklung
 
@@ -197,22 +263,86 @@ Remove-Item "Data\Scripts.rxdata"
 - Raid Battles
 - Max Lair Adventures
 
-## 🤝 Mitarbeit
+## 📊 Projekt-Statistiken
 
-Beiträge sind willkommen! Bitte beachte:
+<div align="center">
 
-1. **Fork** das Repository
-2. Erstelle einen **Feature-Branch**
-3. **Committe** deine Änderungen
-4. **Push** zum Branch
-5. Öffne einen **Pull Request**
+| Kategorie | Details |
+|-----------|---------|
+| 🔌 **Plugins** | 50+ installierte Plugins |
+| 🎨 **Graphics** | 10,000+ PNG-Dateien |
+| 🎵 **Audio** | 500+ Musikdateien |
+| 📋 **PBS Files** | 100+ Daten-Definitionen |
+| 💻 **Ruby Code** | 500,000+ Zeilen |
+| 🌍 **Pokémon** | Gen 1-9 (1000+ Pokémon) |
 
-### Code-Standards
+</div>
 
-- Ruby 3.0+ Syntax
-- Kommentare auf Deutsch oder Englisch
-- Essentials v21.1 Konventionen folgen
-- Plugin-Kompatibilität testen
+## 🗺️ Roadmap
+
+- [x] Basis-Gameplay (Gen 1-9 Pokémon)
+- [x] Dynamax & Gigantamax System
+- [x] Terastallization Implementation
+- [x] Raid Battles Mechanik
+- [x] Deutsche Übersetzung (Core)
+- [ ] Story-Entwicklung
+- [ ] Custom Region Maps
+- [ ] Multiplayer-Features
+- [ ] Custom Battle Frontier
+- [ ] Release v1.0.0
+
+## 🤝 Contributing
+
+Wir freuen uns über jeden Beitrag! 
+
+<details>
+<summary>📝 Contribution Guidelines</summary>
+
+### Wie kann ich beitragen?
+
+1. **🐛 Bugs melden** - [Issue erstellen](https://github.com/99Problemsx/ZTDD/issues/new?template=bug_report.md)
+2. **💡 Features vorschlagen** - [Feature Request](https://github.com/99Problemsx/ZTDD/issues/new?template=feature_request.md)
+3. **📖 Dokumentation verbessern** - Pull Requests willkommen
+4. **🔌 Plugins entwickeln** - Siehe [Plugin Development Guide](docs/PLUGIN_DEVELOPMENT.md)
+5. **🎨 Assets beitragen** - Graphics, Audio, Sprites
+
+### Development Workflow
+
+```bash
+# 1. Fork erstellen
+# 2. Feature Branch erstellen
+git checkout -b feature/amazing-feature
+
+# 3. Änderungen committen
+git commit -m "feat: Add amazing feature"
+
+# 4. Push zum Fork
+git push origin feature/amazing-feature
+
+# 5. Pull Request öffnen
+```
+
+### Code Standards
+
+- ✅ Ruby 3.0+ Syntax
+- ✅ RuboCop-konform
+- ✅ Deutsche oder englische Kommentare
+- ✅ Essentials v21.1 Konventionen
+- ✅ Tests für neue Features
+
+### Commit-Konventionen
+
+```
+feat: Neue Funktion
+fix: Bugfix
+docs: Dokumentation
+style: Formatierung
+refactor: Code-Umstrukturierung
+test: Tests hinzufügen
+chore: Maintenance
+```
+
+</details>
 
 ## 📜 Lizenz
 

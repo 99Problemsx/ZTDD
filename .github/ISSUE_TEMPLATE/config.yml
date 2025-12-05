@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/99Problemsx/ZTDD/discussions
+    about: Stelle Fragen, starte Diskussionen oder teile Ideen
+  - name: 📚 Wiki
+    url: https://github.com/99Problemsx/ZTDD/wiki
+    about: Durchsuche die Projekt-Dokumentation
+  - name: 🎮 Pokémon Essentials Community
+    url: https://www.pokecommunity.com/forums/pokémon-essentials.397/
+    about: Frage die Essentials Community um Hilfe
