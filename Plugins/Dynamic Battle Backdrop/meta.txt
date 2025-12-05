@@ -1,0 +1,5 @@
+Name         = Dynamic Battle Backdrop
+Version      = 1.0
+Essentials   = 21.1
+Link         = no
+Credits      = Nononever

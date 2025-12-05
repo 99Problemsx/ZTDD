@@ -1,0 +1,298 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[CAMPER,Liam]
+LoseText = A very good battle, indeed!
+Pokemon = DIGLETT,10
+Pokemon = BONSLY,11
+#-------------------------------
+[LEADER_Brock,Brock]
+Items = FULLRESTORE,FULLRESTORE
+LoseText = Very good.
+Pokemon = GEODUDE,12
+    Moves = DEFENSECURL,HEADSMASH,ROCKPOLISH,ROCKTHROW
+    AbilityIndex = 0
+    Gender = male
+    IV = 20,20,20,20,20,20
+Pokemon = ONIX,14
+    Name = Rocky
+    Moves = HEADSMASH,ROCKTHROW,RAGE,ROCKTOMB
+    AbilityIndex = 0
+    Item = SITRUSBERRY
+    Gender = male
+    IV = 20,20,20,20,20,20
+    Shiny = true
+    Ball = HEAVYBALL
+#-------------------------------
+[TEAMROCKET_M,Grunt,1]
+LoseText = You're too good for me!
+Pokemon = WEEPINBELL,21
+    Shadow = true
+#-------------------------------
+[TEAMROCKET_F,Grunt,1]
+LoseText = You're too good for me!
+Pokemon = BURMY,19
+Pokemon = WINGULL,19
+Pokemon = ELECTABUZZ,20
+    Shadow = true
+#-------------------------------
+[YOUNGSTER,Ben]
+LoseText = Aww, I lost.
+Pokemon = RATTATA,11
+Pokemon = EKANS,11
+#-------------------------------
+[CAMPER,Jeff]
+LoseText = A very good battle, indeed!
+Pokemon = SPEAROW,16
+Pokemon = SENTRET,16
+#-------------------------------
+[CAMPER,Jeff,1]
+LoseText = You beat me again!
+Pokemon = FEAROW,29
+Pokemon = FURRET,29
+#-------------------------------
+[PICNICKER,Susie]
+LoseText = Defeated! Oh my!
+Pokemon = MEOWTH,18
+#-------------------------------
+[PICNICKER,Susie,1]
+LoseText = Defeated! Oh my!
+Pokemon = PERSIAN,32
+#-------------------------------
+[HIKER,Ford]
+LoseText = You're too good for me!
+Pokemon = MACHOP,19
+#-------------------------------
+[FISHERMAN,Andrew]
+LoseText = Washed out!
+Pokemon = MAGIKARP,14
+Pokemon = MAGIKARP,18
+#-------------------------------
+[BEAUTY,Bridget]
+LoseText = My Skitty!
+Pokemon = SKITTY,18
+#-------------------------------
+[LASS,Crissy]
+LoseText = You didn't have to win so convincingly!
+Pokemon = PLUSLE,17
+Pokemon = MINUN,17
+#-------------------------------
+[COOLCOUPLE,Alice & Bob]
+LoseText = Our teamwork failed!
+Pokemon = TURTWIG,19
+Pokemon = CHIMCHAR,19
+#-------------------------------
+[POKEMONTRAINER_May,May]
+LoseText = ...
+Pokemon = COMBUSKEN,19
+#-------------------------------
+[SWIMMER2_F,Ariel]
+LoseText = Washed out!
+Pokemon = STARYU,15
+Pokemon = GOLDEEN,11
+#-------------------------------
+[RIVAL1,Blue]
+LoseText = Not too shabby.
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = BULBASAUR,18
+#-------------------------------
+[RIVAL1,Blue,1]
+LoseText = Not too shabby.
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = CHARMANDER,18
+#-------------------------------
+[RIVAL1,Blue,2]
+LoseText = Not too shabby.
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = SQUIRTLE,18
+#-------------------------------
+[CHAMPION,Blue]
+LoseText = A good battle indeed!
+Pokemon = VENUSAUR,63
+    Item = SITRUSBERRY
+Pokemon = CHARIZARD,63
+    Item = SITRUSBERRY
+Pokemon = BLASTOISE,63
+    Item = SITRUSBERRY
+#-------------------------------
+# === ADVANCED AI TEST TRAINERS ===
+# These trainers showcase different AI skill levels
+#-------------------------------
+[YOUNGSTER,BasicAI]
+LoseText = I'm still learning!
+SkillLevel = 10
+Pokemon = PIDGEY,100
+Pokemon = RATTATA,100
+#-------------------------------
+[LASS,MediumAI]
+LoseText = You're pretty good!
+SkillLevel = 35
+Pokemon = PIKACHU,100
+    Moves = THUNDERBOLT,QUICKATTACK,THUNDERWAVE,TAILWHIP
+Pokemon = CLEFAIRY,100
+    Moves = MOONBLAST,SING,DOUBLESLAP,MINIMIZE
+#-------------------------------
+[COOLTRAINER_M,AdvancedAI]
+LoseText = Impressive strategy!
+SkillLevel = 55
+Items = HYPERPOTION,HYPERPOTION
+Pokemon = GYARADOS,100
+    Moves = WATERFALL,ICEFANG,DRAGONDANCE,CRUNCH
+    Item = LEFTOVERS
+Pokemon = ALAKAZAM,100
+    Moves = PSYCHIC,SHADOWBALL,CALMMIND,RECOVER
+    Item = TWISTEDSPOON
+Pokemon = ARCANINE,100
+    Moves = FLAREBLITZ,EXTREMESPEED,WILDCHARGE,MORNINGSUN
+    Item = CHARCOAL
+#-------------------------------
+[COOLTRAINER_F,ExpertAI]
+LoseText = Your tactics were superior!
+SkillLevel = 80
+Items = FULLRESTORE,FULLRESTORE
+Pokemon = JOLTEON,100
+    Moves = THUNDERBOLT,VOLTSWITCH,SHADOWBALL,CALMMIND
+    Item = LIFEORB
+Pokemon = ESPEON,100
+    Moves = PSYCHIC,DAZZLINGGLEAM,CALMMIND,MORNINGSUN
+    Item = LIGHTCLAY
+Pokemon = UMBREON,100
+    Moves = FOULPLAY,TOXIC,WISH,PROTECT
+    Item = LEFTOVERS
+Pokemon = VAPOREON,100
+    Moves = SCALD,ICEBEAM,WISH,PROTECT
+    Item = LEFTOVERS
+#-------------------------------
+[ACE_TRAINER_M,MasterAI]
+LoseText = That was an incredible battle!
+SkillLevel = 100
+Items = FULLRESTORE,FULLRESTORE,FULLRESTORE
+Pokemon = DRAGONITE,100
+    Moves = OUTRAGE,EXTREMESPEED,DRAGONDANCE,EARTHQUAKE
+    Item = LUMBERRY
+    IV = 31,31,31,31,31,31
+Pokemon = METAGROSS,100
+    Moves = METEORMASH,EARTHQUAKE,ZENHEADBUTT,AGILITY
+    Item = CHOICEBAND
+    IV = 31,31,31,31,31,31
+Pokemon = GARCHOMP,100
+    Moves = EARTHQUAKE,OUTRAGE,SWORDSDANCE,FIREFANG
+    Item = YACHEBERRY
+    IV = 31,31,31,31,31,31
+Pokemon = GENGAR,100
+    Moves = SHADOWBALL,SLUDGEBOMB,FOCUSBLAST,DESTINYBOND
+    Item = LIFEORB
+    IV = 31,31,31,31,31,31
+Pokemon = FERROTHORN,100
+    Moves = POWERWHIP,GYROBALL,STEALTHROCK,LEECHSEED
+    Item = LEFTOVERS
+    IV = 31,31,31,31,31,31
+Pokemon = ROTOM,100
+    Moves = HYDROPUMP,VOLTSWITCH,WILLOWISP,TRICK
+    Item = CHOICESCARF
+    Form = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[ACE_TRAINER_F,WeatherMaster]
+LoseText = Your team overcame my weather strategy!
+SkillLevel = 95
+Items = FULLRESTORE,FULLRESTORE
+Pokemon = POLITOED,100
+    Moves = SCALD,ICEBEAM,REST,SLEEPTALK
+    Item = DAMPROCK
+    Ability = DRIZZLE
+Pokemon = KINGDRA,100
+    Moves = HYDROPUMP,DRACOMETEOR,ICEBEAM,SURF
+    Item = CHOICESPECS
+    Ability = SWIFTSWIM
+Pokemon = FERROTHORN,100
+    Moves = POWERWHIP,GYROBALL,STEALTHROCK,PROTECT
+    Item = LEFTOVERS
+Pokemon = TOXICROAK,100
+    Moves = DRAINPUNCH,SUCKERPUNCH,SWORDSDANCE,POISONJAB
+    Item = LIFEORB
+    Ability = DRYSKIN
+#-------------------------------
+[ACE_TRAINER_M,SetupSweeper]
+LoseText = You shut down my setup strategy!
+SkillLevel = 85
+Items = FULLRESTORE,FULLRESTORE
+Pokemon = CLEFABLE,100
+    Moves = MOONBLAST,CALMMIND,SOFTBOILED,COSMICPOWER
+    Item = LEFTOVERS
+    Ability = MAGICGUARD
+Pokemon = LUCARIO,100
+    Moves = CLOSECOMBAT,EXTREMESPEED,SWORDSDANCE,METEORMASH
+    Item = LIFEORB
+    Ability = JUSTIFIED
+Pokemon = VOLCARONA,100
+    Moves = BUGBUZZ,FLAMETHROWER,QUIVERDANCE,ROOST
+    Item = LEFTOVERS
+    Ability = FLAMEBODY
+Pokemon = AZUMARILL,100
+    Moves = AQUAJET,PLAYROUGH,BELLYDRUM,KNOCKOFF
+    Item = SITRUSBERRY
+    Ability = HUGEPOWER
+#-------------------------------
+[ACE_TRAINER_F,HazardMaster]
+LoseText = You navigated my hazards well!
+SkillLevel = 90
+Items = FULLRESTORE,FULLRESTORE
+Pokemon = SKARMORY,100
+    Moves = SPIKES,STEALTHROCK,ROOST,BRAVEBIRD
+    Item = ROCKYHELMET
+    Ability = STURDY
+Pokemon = EXCADRILL,100
+    Moves = EARTHQUAKE,IRONHEAD,RAPIDSPIN,SWORDSDANCE
+    Item = CHOICEBAND
+    Ability = MOLDBREAKER
+Pokemon = ESPEON,100
+    Moves = PSYCHIC,DAZZLINGGLEAM,MORNINGSUN,TRICK
+    Item = CHOICESCARF
+    Ability = MAGICBOUNCE
+Pokemon = GLISCOR,100
+    Moves = EARTHQUAKE,TOXIC,ROOST,PROTECT
+    Item = TOXICORB
+    Ability = POISONHEAL
+#-------------------------------
+[LEADER_Sabrina,TestMega]
+LoseText = Your power exceeded my psychic abilities!
+SkillLevel = 100
+Items = FULLRESTORE,FULLRESTORE
+Pokemon = ALAKAZAM,100
+    Moves = PSYCHIC,FOCUSBLAST,SHADOWBALL,CALMMIND
+    Item = ALAKAZITE
+Pokemon = ESPEON,100
+    Moves = PSYCHIC,DAZZLINGGLEAM,CALMMIND,MORNINGSUN
+    Item = LIGHTCLAY
+Pokemon = STARMIE,100
+    Moves = PSYCHIC,SURF,THUNDERBOLT,RAPIDSPIN
+    Item = LIFEORB
+Pokemon = METAGROSS,100
+    Moves = METEORMASH,EARTHQUAKE,ZENHEADBUTT,AGILITY
+    Item = METAGROSSITE
+#-------------------------------
+[ELITE_FOUR,TestTera]
+LoseText = Your strategy was flawless!
+SkillLevel = 100
+Items = FULLRESTORE,FULLRESTORE,FULLRESTORE
+Pokemon = DRAGONITE,100
+    Moves = OUTRAGE,EXTREMESPEED,DRAGONDANCE,EARTHQUAKE
+    Item = LUMBERRY
+Pokemon = GARCHOMP,100
+    Moves = EARTHQUAKE,OUTRAGE,SWORDSDANCE,STONEEDGE
+    Item = YACHEBERRY
+Pokemon = SALAMENCE,100
+    Moves = DRACOMETEOR,HURRICANE,ROOST,FIREBLAST
+    Item = LIFEORB
+Pokemon = TYRANITAR,100
+    Moves = STONEEDGE,CRUNCH,EARTHQUAKE,DRAGONDANCE
+    Item = CHOICEBAND
+Pokemon = FLYGON,100
+    Moves = EARTHQUAKE,OUTRAGE,UTURN,DRAGONCLAW
+    Item = CHOICESCARF
+Pokemon = KINGDRA,100
+    Moves = DRACOMETEOR,HYDROPUMP,ICEBEAM,DRAGONPULSE
+    Item = CHOICESPECS

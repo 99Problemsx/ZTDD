@@ -1,0 +1,65 @@
+<script>
+// Scroll Animations
+document.addEventListener('DOMContentLoaded', function() {
+    // Add fade-in animation to sections
+    const sections = document.querySelectorAll('.card, table, .code-example');
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-section', 'is-visible');
+            }
+        });
+    }, observerOptions);
+    
+    sections.forEach(section => {
+        section.classList.add('fade-in-section');
+        observer.observe(section);
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+    
+    // Add sparkle effect to emojis
+    const emojis = document.querySelectorAll('h2, h3').forEach(heading => {
+        const text = heading.innerHTML;
+        const emojiRegex = /([\u{1F300}-\u{1F9FF}])/gu;
+        heading.innerHTML = text.replace(emojiRegex, '<span class="sparkle">$1</span>');
+    });
+});
+
+// Parallax effect for pokéballs
+if (window.innerWidth > 768) {
+    document.addEventListener('mousemove', function(e) {
+        const pokeballs = document.querySelectorAll('.pokeball-bg');
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        
+        pokeballs.forEach((ball, index) => {
+            const speed = (index + 1) * 0.05;
+            const xMove = (x - 0.5) * 50 * speed;
+            const yMove = (y - 0.5) * 50 * speed;
+            ball.style.transform = `translate(${xMove}px, ${yMove}px)`;
+        });
+    });
+}
+</script>

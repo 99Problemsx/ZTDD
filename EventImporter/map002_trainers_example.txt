@@ -1,0 +1,97 @@
+# Example: Map Trainers using MAPTRAINER command
+# This file demonstrates the MapTrainer integration
+
+MAP: 2
+
+# ============================================
+# EXAMPLE 1: Simple Trainer with Second Page
+# ============================================
+EVENT: Camper Liam, X: 16, Y: 8
+GRAPHIC: trainer_CAMPER
+TRIGGER: Action
+TEXT: Hey! Want to battle?
+MAPTRAINER: CAMPER, Liam, "You're tough!"
+  POKEMON: RATTATA, 5
+  POKEMON: PIDGEY, 6
+END_MAPTRAINER
+NEW_PAGE
+CONDITION_SELF_SWITCH: A
+GRAPHIC: trainer_CAMPER
+TRIGGER: Action
+TEXT: That was a great battle!
+TEXT: You're really strong!
+
+# ============================================
+# EXAMPLE 2: Trainer with Items and Moves
+# ============================================
+EVENT: Youngster Ben, X: 10, Y: 10
+GRAPHIC: trainer_YOUNGSTER
+TRIGGER: Line of Sight
+CONDITIONAL: SELF_SWITCH A == OFF
+  TEXT: I see you!
+  MAPTRAINER: YOUNGSTER, Ben, "I lost!"
+    TRAINER_INTRO: I'm going to be a Pokemon Master!
+    TRAINER_ITEMS: POTION, POKEBALL
+    POKEMON: CATERPIE, 7, moves: TACKLE, STRING_SHOT
+    POKEMON: WEEDLE, 7, item: ORAN_BERRY, moves: POISON_STING
+  END_MAPTRAINER
+CONDITIONAL: ELSE
+  TEXT: You're really strong!
+
+# ============================================
+# EXAMPLE 3: Advanced Trainer with Abilities
+# ============================================
+EVENT: Picnicker Amy, X: 20, Y: 15
+GRAPHIC: trainer_PICNICKER
+TRIGGER: Action
+CONDITIONAL: SELF_SWITCH A == OFF
+  TEXT: Let's have a Pokemon battle!
+  MAPTRAINER: PICNICKER, Amy, "You win!"
+    TRAINER_INTRO: I love cute Pokemon!
+    POKEMON: PIKACHU, 10, ability: STATIC, item: LIGHT_BALL, gender: female
+    POKEMON: CLEFAIRY, 12, ability: CUTE_CHARM, gender: female, moves: POUND, GROWL, ENCORE
+    POKEMON: JIGGLYPUFF, 11, item: ORAN_BERRY
+  END_MAPTRAINER
+CONDITIONAL: ELSE
+  TEXT: Your Pokemon are so strong!
+
+# ============================================
+# EXAMPLE 4: Gym Leader
+# ============================================
+EVENT: Leader Brock, X: 15, Y: 20
+GRAPHIC: trainer_LEADER_BROCK
+TRIGGER: Action
+CONDITIONAL: SELF_SWITCH A == OFF
+  TEXT: Welcome to Pewter City Gym!
+  TEXT: I'm Brock, the Rock-Solid Pokemon Trainer!
+  MAPTRAINER: LEADER_BROCK, Brock, "I took you for granted!"
+    TRAINER_INTRO: So, you want to challenge me?\nFine then! Show me your best!
+    TRAINER_ITEMS: POTION, POTION, SUPER_POTION
+    POKEMON: GEODUDE, 12, ability: STURDY, moves: TACKLE, DEFENSE_CURL, ROCK_THROW
+    POKEMON: ONIX, 14, ability: ROCK_HEAD, item: BERRY, moves: TACKLE, SCREECH, BIND, ROCK_THROW
+  END_MAPTRAINER
+  CONDITIONAL: VARIABLE 1 == 1
+    TEXT: I took you for granted. As proof of your victory, here's the Boulder Badge!
+    ITEM: TM_ROCK_TOMB
+    MONEY: 1400
+CONDITIONAL: ELSE
+  TEXT: There are all kinds of trainers in the world!
+
+# ============================================
+# NOTES
+# ============================================
+# MAPTRAINER syntax:
+#   MAPTRAINER: TYPE, Name, "Lose text"
+#   TRAINER_INTRO: "Intro message before battle"  (optional)
+#   TRAINER_ITEMS: ITEM1, ITEM2, ITEM3  (optional)
+#   POKEMON: SPECIES, level
+#   POKEMON: SPECIES, level, moves: MOVE1, MOVE2
+#   POKEMON: SPECIES, level, ability: ABILITY, item: ITEM, gender: male/female
+#   POKEMON: SPECIES, level, ability: ABILITY, item: ITEM, moves: [MOVE1, MOVE2, MOVE3]
+#   END_MAPTRAINER
+#
+# The trainer automatically:
+# - Registers with GameData::MapTrainer
+# - Sets self switch A when defeated
+# - Prevents re-battling
+# - Uses TrainerBattle.start internally

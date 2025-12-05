@@ -1,0 +1,14 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[BERRYPOTS]
+Name = Berry Pots
+NamePlural = Berry Pots
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Handy containers for cultivating Berries wherever you go.
+SellBPPrice = 0
+CoinPrice = 1
+SellCoinPrice = 0
+Instrument = 1

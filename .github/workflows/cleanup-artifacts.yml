@@ -1,0 +1,31 @@
+name: Cleanup Old Artifacts
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # Daily at 3 AM
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Delete old artifacts
+        uses: c-hive/gha-remove-artifacts@v1
+        with:
+          age: '7 days'  # Delete artifacts older than 7 days
+          skip-recent: 5  # Keep the 5 most recent artifacts
+          skip-tags: true  # Don't delete artifacts from tagged releases
+      
+      - name: Summary
+        run: |
+          echo "## Artifact Cleanup Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Removed artifacts older than 7 days" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Kept the 5 most recent artifacts" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "This helps maintain storage quota limits for GitHub Actions." >> $GITHUB_STEP_SUMMARY

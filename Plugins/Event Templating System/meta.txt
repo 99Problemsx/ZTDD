@@ -1,0 +1,4 @@
+Name         = Event Templating System
+Version      = 1.0.0
+Essentials   = 21.1
+Credits      = Based on Luka S.J.'s approach

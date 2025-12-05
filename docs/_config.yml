@@ -1,0 +1,99 @@
+# Jekyll Configuration for Zorua - The Divine Deception
+title: "Zorua: The Divine Deception"
+description: "Ein deutsches Pokémon Fangame basierend auf Pokémon Essentials v21.1"
+baseurl: "/Zorua-the-divine-deception"
+url: "https://99problemsx.github.io"
+
+# Theme
+theme: jekyll-theme-cayman
+remote_theme: just-the-docs/just-the-docs
+
+# Logo & Favicon
+logo: "/assets/images/logo.png"
+favicon_ico: "/assets/images/favicon.ico"
+
+# Navigation
+nav_enabled: true
+nav_sort: case_insensitive
+
+# Search
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false
+
+# Footer
+footer_content: "Copyright &copy; 2025 99Problemsx. Dieses Projekt basiert auf Pokémon Essentials."
+
+# Color scheme
+color_scheme: dark
+
+# Custom CSS
+head_custom: |
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+
+# Collections
+collections:
+  pokemon:
+    output: true
+    permalink: /pokedex/:name/
+  routes:
+    output: true
+    permalink: /routes/:name/
+  towns:
+    output: true
+    permalink: /towns/:name/
+  story:
+    output: true
+    permalink: /story/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "docs"
+    values:
+      layout: "default"
+  - scope:
+      type: "pokemon"
+    values:
+      layout: "pokemon"
+  - scope:
+      type: "routes"
+    values:
+      layout: "route"
+  - scope:
+      type: "towns"
+    values:
+      layout: "town"
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - "*.rxdata"
+  - "*.dll"
+  - "*.exe"
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

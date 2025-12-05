@@ -1,0 +1,167 @@
+#===============================================================================
+# EXAMPLE: Dark Grass Encounters Setup
+# This file shows examples of how to configure dark grass encounters
+# Copy these examples to your PBS/encounters.txt file
+#===============================================================================
+
+# Example 1: Basic Dark Grass (stronger Pokémon than normal grass)
+# Map ID: 001
+#===============================================================================
+# [001]
+# # Normal grass encounters (levels 10-14)
+# Land,12,10,10,10,10,8,8,8,8,6,6,4,4
+#   PIDGEY,10,14
+#   RATTATA,10,14
+#   PIDGEY,12,16
+#   RATTATA,12,16
+#   PIDGEY,14,18
+#   RATTATA,14,18
+#   PIDGEOTTO,16,20
+#   RATICATE,16,20
+#   PIDGEOTTO,18,22
+#   RATICATE,18,22
+#   PIDGEOTTO,20,24
+#   RATICATE,20,24
+# 
+# # Dark grass encounters (levels 15-20, evolved forms more common)
+# DarkGrass,12,10,10,10,10,8,8,8,8,6,6,4,4
+#   PIDGEOTTO,15,18
+#   RATICATE,15,18
+#   PIDGEOTTO,16,19
+#   RATICATE,16,19
+#   PIDGEOTTO,17,20
+#   RATICATE,17,20
+#   PIDGEOT,18,21
+#   RATICATE,18,21
+#   PIDGEOT,19,22
+#   RATICATE,19,22
+#   PIDGEOT,20,23
+#   RATICATE,20,23
+
+#===============================================================================
+# Example 2: Time-based Dark Grass (different Pokémon day vs night)
+# Map ID: 002
+#===============================================================================
+# [002]
+# # Normal day encounters
+# LandDay,12,10,10,10,10,8,8,8,8,6,6,4,4
+#   SENTRET,8,12
+#   PIDGEY,8,12
+#   SENTRET,10,14
+#   PIDGEY,10,14
+#   FURRET,12,16
+#   PIDGEOTTO,12,16
+#   FURRET,14,18
+#   PIDGEOTTO,14,18
+#   FURRET,16,20
+#   PIDGEOTTO,16,20
+#   FURRET,18,22
+#   PIDGEOTTO,18,22
+# 
+# # Normal night encounters
+# LandNight,12,10,10,10,10,8,8,8,8,6,6,4,4
+#   HOOTHOOT,8,12
+#   RATTATA,8,12
+#   HOOTHOOT,10,14
+#   RATTATA,10,14
+#   NOCTOWL,12,16
+#   RATICATE,12,16
+#   NOCTOWL,14,18
+#   RATICATE,14,18
+#   NOCTOWL,16,20
+#   RATICATE,16,20
+#   NOCTOWL,18,22
+#   RATICATE,18,22
+# 
+# # Dark grass day encounters (stronger than normal)
+# DarkGrassDay,12,10,10,10,10,8,8,8,8,6,6,4,4
+#   FURRET,14,18
+#   PIDGEOTTO,14,18
+#   FURRET,16,20
+#   PIDGEOTTO,16,20
+#   FURRET,18,22
+#   PIDGEOT,18,22
+#   FURRET,20,24
+#   PIDGEOT,20,24
+#   FURRET,22,26
+#   PIDGEOT,22,26
+#   FURRET,24,28
+#   PIDGEOT,24,28
+# 
+# # Dark grass night encounters (stronger than normal)
+# DarkGrassNight,12,10,10,10,10,8,8,8,8,6,6,4,4
+#   NOCTOWL,14,18
+#   RATICATE,14,18
+#   NOCTOWL,16,20
+#   RATICATE,16,20
+#   NOCTOWL,18,22
+#   RATICATE,18,22
+#   NOCTOWL,20,24
+#   RATICATE,20,24
+#   NOCTOWL,22,26
+#   RATICATE,22,26
+#   NOCTOWL,24,28
+#   RATICATE,24,28
+
+#===============================================================================
+# Example 3: Rare Pokémon in Dark Grass Only
+# Map ID: 003
+#===============================================================================
+# [003]
+# # Normal grass - common Pokémon only
+# Land,12,10,10,10,10,8,8,8,8,6,6,4,4
+#   CATERPIE,5,8
+#   WEEDLE,5,8
+#   CATERPIE,6,9
+#   WEEDLE,6,9
+#   METAPOD,7,10
+#   KAKUNA,7,10
+#   METAPOD,8,11
+#   KAKUNA,8,11
+#   BUTTERFREE,9,12
+#   BEEDRILL,9,12
+#   BUTTERFREE,10,13
+#   BEEDRILL,10,13
+# 
+# # Dark grass - includes rare starter Pokémon!
+# DarkGrass,12,10,10,10,10,8,8,8,8,6,6,4,4
+#   METAPOD,8,12
+#   KAKUNA,8,12
+#   BUTTERFREE,10,14
+#   BEEDRILL,10,14
+#   BUTTERFREE,12,16
+#   BEEDRILL,12,16
+#   BULBASAUR,10,15
+#   CHARMANDER,10,15
+#   SQUIRTLE,10,15
+#   BULBASAUR,12,17
+#   CHARMANDER,12,17
+#   SQUIRTLE,12,17
+
+#===============================================================================
+# Tips for Designing Dark Grass Encounters:
+#===============================================================================
+# 1. Dark grass should have noticeably stronger Pokémon than normal grass
+#    - Higher levels (+5 levels is a good baseline)
+#    - Evolved forms more common
+#    - Rarer species available
+# 
+# 2. Keep the encounter rate the same (12) for consistency
+# 
+# 3. The encounter slots work the same as normal encounters:
+#    - First value: Encounter density (typically 12)
+#    - Following values: Probability weights for each slot
+#    - Higher weights = more common encounters
+# 
+# 4. You can mix strategies:
+#    - Same species, higher levels
+#    - Different species entirely
+#    - Rare or special Pokémon only in dark grass
+#    - Regional variants or forms
+# 
+# 5. Double battles are possible in dark grass (30% chance when party has 2+ Pokémon)
+# 
+# 6. For time-based encounters, make sure all time variants are defined:
+#    - DarkGrassDay / DarkGrassMorning / DarkGrassAfternoon / DarkGrassEvening
+#    - DarkGrassNight
+#    Or just use DarkGrass for all times

@@ -1,0 +1,5 @@
+Name         = Dark Grass Encounters
+Version      = 1.0.0
+Essentials   = 21.1
+Link         = no
+Credits      = Nononever, Juliorain, Vendily

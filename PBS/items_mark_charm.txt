@@ -1,0 +1,13 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[MARKCHARM]
+Name = Mark Charm
+NamePlural = Mark Charms
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Having one of these mysterious charms makes it more likely you’ll encounter a Pokémon with a mark.
+SellBPPrice = 0
+CoinPrice = 1
+SellCoinPrice = 0
+Instrument = 1
