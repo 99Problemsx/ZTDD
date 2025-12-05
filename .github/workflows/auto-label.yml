@@ -24,8 +24,10 @@ jobs:
         with:
           script: |
             const issue = context.payload.issue || context.payload.pull_request;
-            const body = issue.body.toLowerCase();
-            const title = issue.title.toLowerCase();
+            if (!issue || !issue.body) return;
+            
+            const body = (issue.body || '').toLowerCase();
+            const title = (issue.title || '').toLowerCase();
             
             const labels = [];
             
