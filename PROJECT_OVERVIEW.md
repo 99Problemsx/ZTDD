@@ -2,11 +2,11 @@
 
 ## Statistics
 
-- **Plugins**: 92
-- **Ruby Files**: 629 (152940 lines)
-- **PBS Files**: 47 (67718 lines)
-- **Graphics**: 21962 PNG files
-- **Audio**: 2821 files
+- **Plugins**: 86
+- **Ruby Files**: 640 (155000 lines)
+- **PBS Files**: 58 (78567 lines)
+- **Graphics**: 23373 PNG files
+- **Audio**: 2820 files
 
 ## Quick Links
 
