@@ -30,7 +30,7 @@ jobs:
             -x "Auto *.rxdata"
       
       - name: Upload to Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: weekly-backup-${{ github.run_number }}
           path: backup-*.zip
