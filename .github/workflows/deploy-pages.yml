@@ -24,6 +24,7 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        continue-on-error: true
 
       - name: Generate Website
         run: |
@@ -410,11 +411,11 @@ jobs:
                           Pokémon und alle zugehörigen Namen sind Handelsmarken von Nintendo, Game Freak und Creatures Inc.
                       </p>
                   </div>
-              </footer>
           </body>
           </html>
           EOF
-                      text-align: center;
+          
+          # Kopiere Dokumentationnter;
                       padding: 20px;
                   }
                   .stat-value {
@@ -592,15 +593,18 @@ jobs:
           </html>
           EOF
 
-          # Kopiere Dokumentation
           cp README.md _site/ || true
-          cp AUTOMATION_SETUP.md _site/ || true
-          cp PLUGINS.md _site/ 2>/dev/null || echo "# Plugins\nWill be generated on next run" > _site/PLUGINS.md
-          cp PBS_DOCS.md _site/ 2>/dev/null || echo "# PBS Documentation\nWill be generated on next run" > _site/PBS_DOCS.md
-          cp STATS.md _site/ 2>/dev/null || echo "# Statistics\nWill be generated on next run" > _site/STATS.md
+          cp CONTRIBUTING.md _site/ || true
+          cp PLUGINS.md _site/ 2>/dev/null || true
+          cp PBS_DOCS.md _site/ 2>/dev/null || true
+          cp PROJECT_OVERVIEW.md _site/ 2>/dev/null || true
+          
+          echo "✅ Website generated successfully"
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
 
   deploy:
     environment:
